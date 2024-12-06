@@ -26,15 +26,18 @@ void menu() {
 	cout << "==================================\n";
 	cout << " Calculadora Basica con 2 Numeros \n";
 	cout << "==================================\n";
-	cout << "1. Sumar ( + )\n";
-	cout << "2. Restar ( - )\n";
-	cout << "3. Multiplicar ( * )\n";
-	cout << "4. Dividir ( / )\n";
-	cout << "5. Porcentaje ( % )\n";
-	cout << "6. Potenciar ( ^ )\n";
+	cout << "1. Sumar + \n";
+	cout << "2. Restar - \n";
+	cout << "3. Multiplicar * \n";
+	cout << "4. Dividir / \n";
+	cout << "5. Porcentaje % \n";
+	cout << "6. Potenciar ^ \n";
 	cout << "7. Raiz Cuadrada\n";
-	cout << "8. Volumen Cilindro ( cm^3 )\n";
-	cout << "9. Binomio Cuadrado ( (a + b)^2 )\n";
+	cout << "8. Area Cuadrado cm^2 \n";
+	cout << "9. Area Rectangulo cm^2 \n";
+	cout << "A. Area Circulo cm^2 \n";
+	cout << "B. Volumen Cilindro cm^3 \n";
+	cout << "C. Binomio Cuadrado (a + b)^2 \n";
 	cout << endl;
 	cout << "0. SALIR\n";
 	cout << endl;
@@ -52,7 +55,7 @@ int main(){
 
 		switch (option) {
 			case '1':
-				cout << " || Sumar ( + ) || \n";
+				cout << " || Sumar + || \n";
 				cout << "Ingrese el Primer Numero:" << endl;
 				cin >> num1;
 				cout << endl;
@@ -64,7 +67,7 @@ int main(){
 				cout << "==================================" << endl;
 			break;
 			case '2':
-				cout << " || Restar ( - ) || \n";
+				cout << " || Restar - || \n";
 				cout << "Ingrese el Primer Numero:" << endl;
 				cin >> num1;
 				cout << endl;
@@ -76,7 +79,7 @@ int main(){
 				cout << "==================================" << endl;
 			break;
 			case '3':
-				cout << " || Multiplicar ( * ) || \n";
+				cout << " || Multiplicar * || \n";
 				cout << "Ingrese el Primer Numero:" << endl;
 				cin >> num1;
 				cout << endl;
@@ -88,7 +91,7 @@ int main(){
 				cout << "==================================" << endl;
 			break;
 			case '4':
-				cout << " || Dividir ( / ) || \n";
+				cout << " || Dividir / || \n";
 				cout << "Ingrese el Primer Numero:" << endl;
 				cin >> num1;
 				cout << endl;
@@ -100,7 +103,7 @@ int main(){
 				cout << "==================================" << endl;
 			break;
 			case '5':
-				cout << " || Porcentaje ( % ) || \n";
+				cout << " || Porcentaje % || \n";
 				cout << "Ingrese el Primer Numero:" << endl;
 				cin >> num1;
 				cout << endl;
@@ -112,7 +115,7 @@ int main(){
 				cout << "==================================" << endl;
 			break;
 			case '6':
-				cout << " || Potenciar ( ^ ) || \n";
+				cout << " || Potenciar ^ || \n";
 				cout << "Ingrese el Primer Numero:" << endl;
 				cin >> num1;
 				cout << endl;
@@ -133,7 +136,37 @@ int main(){
 				cout << "==================================" << endl;
 			break;
 			case '8':
-				cout << " || Volumen Cilindro ( cm^3 ) || \n";
+				cout << " || Area Cuadrado cm^2 || \n";
+				cout << "Ingrese el Lado (cm):" << endl;
+				cin >> num1;
+				cout << endl;
+				value = pow(num1, 2);
+				cout << "El Area es = " << value << " cm2" << endl;
+				cout << "==================================" << endl;
+			break;
+			case '9':
+				cout << " || Area Rectangulo cm^2 || \n";
+				cout << "Ingrese el Primer Lado (cm):" << endl;
+				cin >> num1;
+				cout << endl;
+				cout << "Ingrese el Segundo Lado (cm)" << endl;
+				cin >> num2;
+				cout << endl;
+				value = num1 * num2;
+				cout << "El Area es = " << value << " cm2" << endl;
+				cout << "==================================" << endl;
+			break;
+			case 'A':
+				cout << " || Area Circulo cm^2 || \n";
+				cout << "Ingrese el Radio (cm):" << endl;
+				cin >> num1;
+				cout << endl;
+				value = M_PI * pow(num1, 2);
+				cout << "El Area es = " << value << " cm2" << endl;
+				cout << "==================================" << endl;
+			break;
+			case 'B':
+				cout << " || Volumen Cilindro cm^3 || \n";
 				cout << "Ingrese el Radio (cm^3):" << endl;
 				cin >> num1;
 				cout << endl;
@@ -144,8 +177,8 @@ int main(){
 				cout << "El Volumen es = " << value << " cm3" << endl;
 				cout << "==================================" << endl;
 			break;
-			case '9':
-				cout << " || Binomio Cuadrado ( (a + b)^2 ) || \n";
+			case 'C':
+				cout << " || Binomio Cuadrado (a + b)^2 || \n";
 				cout << "Ingrese el Primer Numero:" << endl;
 				cin >> num1;
 				cout << endl;
