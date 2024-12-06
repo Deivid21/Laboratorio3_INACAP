@@ -36,8 +36,9 @@ void menu() {
 	cout << "8. Area Cuadrado cm^2 \n";
 	cout << "9. Area Rectangulo cm^2 \n";
 	cout << "A. Area Circulo cm^2 \n";
-	cout << "B. Volumen Cilindro cm^3 \n";
-	cout << "C. Binomio Cuadrado (a + b)^2 \n";
+	cout << "B. Area Triangulo cm^2 \n";
+	cout << "C. Volumen Cilindro cm^3 \n";
+	cout << "D. Binomio Cuadrado (a + b)^2 \n";
 	cout << endl;
 	cout << "0. SALIR\n";
 	cout << endl;
@@ -166,6 +167,18 @@ int main(){
 				cout << "==================================" << endl;
 			break;
 			case 'B':
+				cout << " || Area Triangulo cm^2 || \n";
+				cout << "Ingrese la Base (cm):" << endl;
+				cin >> num1;
+				cout << endl;
+				cout << "Ingrese la Altura (cm)" << endl;
+				cin >> num2;
+				cout << endl;
+				value = 0.5 * num1 * num2;
+				cout << "El Area es = " << value << " cm2" << endl;
+				cout << "==================================" << endl;
+			break;
+			case 'C':
 				cout << " || Volumen Cilindro cm^3 || \n";
 				cout << "Ingrese el Radio (cm^3):" << endl;
 				cin >> num1;
@@ -177,7 +190,7 @@ int main(){
 				cout << "El Volumen es = " << value << " cm3" << endl;
 				cout << "==================================" << endl;
 			break;
-			case 'C':
+			case 'D':
 				cout << " || Binomio Cuadrado (a + b)^2 || \n";
 				cout << "Ingrese el Primer Numero:" << endl;
 				cin >> num1;
