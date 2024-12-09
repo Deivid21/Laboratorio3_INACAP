@@ -39,6 +39,10 @@ void menu() {
 	cout << "B. Area Triangulo cm^2 \n";
 	cout << "C. Volumen Cilindro cm^3 \n";
 	cout << "D. Binomio Cuadrado (a + b)^2 \n";
+	cout << "E. De 0 a 10 / While \n";
+	cout << "F. De 10 a 0 / While \n";
+	cout << "G. De 0 a 10 / For \n";
+	cout << "H. De 10 a 0 / For \n";
 	cout << endl;
 	cout << "0. SALIR\n";
 	cout << endl;
@@ -46,12 +50,14 @@ void menu() {
 }
 
 int main(){
-	double num1, num2, value;
 	char option;
+	double num1, num2, value;
+	int i;
 
 	do {
 		menu();
 		cin >> option;
+		option = toupper(option);
 		cout << endl;
 
 		switch (option) {
@@ -202,10 +208,41 @@ int main(){
 				cout << "(" << num1 << " + " << num2 << ")^2" << " es = " << value << endl;
 				cout << "==================================" << endl;
 			break;
+			case 'E':
+				cout << " || De 0 a 10 / While || \n";
+				i=0;
+				while (i<=10){
+					cout << i << endl;
+					i++;
+				}
+				cout << "==================================" << endl;
+			break;
+			case 'F':
+				cout << " || De 10 a 0 / While || \n";
+				i=10;
+				while (i>=0){
+					cout << i << endl;
+					i--;
+				}
+				cout << "==================================" << endl;
+			break;
+			case 'G':
+				cout << " || De 0 a 10 / For || \n";
+				for (i=0; i <=10;i++){
+					cout << i << endl;
+				}
+				cout << "==================================" << endl;
+			break;
+			case 'H':
+				cout << " || De 10 a 0 / For || \n";
+				for (i=10; i >=0;i--){
+					cout << i << endl;
+				}
+				cout << "==================================" << endl;
+			break;
 			case '0':
 				cout << "Saliendo..." << endl;
 				cout << "==================================" << endl;
-				return 0;
 			break;
 			default:
 				cout << "Ingrese una opcion correcta" << endl;
@@ -214,6 +251,6 @@ int main(){
 		}
 		cout << endl;
 	}
-	while (option != 9);
+	while (option != '0');
 	return 0;
 }
