@@ -24,17 +24,11 @@ using namespace std;
 
 void menu() {
 	cout << "==================================\n";
-	cout << " Calculadora Basica con 2 Numeros \n";
+	cout << "      Calculadora Geometrica      \n";
 	cout << "==================================\n";
-	cout << "1. Sumar +               || A. Area Circulo cm^2 \n";
-	cout << "2. Restar -              || B. Area Triangulo cm^2 \n";
-	cout << "3. Multiplicar *         || C. Volumen Cilindro cm^3 \n";
-	cout << "4. Dividir /             || D. Binomio Cuadrado (a + b)^2 \n";
-	cout << "5. Porcentaje %          || E. De 0 a 10 / While \n";
-	cout << "6. Potenciar ^           || F. De 10 a 0 / While \n";
-	cout << "7. Raiz Cuadrada         || G. De 0 a 10 / For \n";
-	cout << "8. Area Cuadrado cm^2    || H. De 10 a 0 / For \n";
-	cout << "9. Area Rectangulo cm^2  || \n";
+	cout << "1. Area Rombo       || A. Perimetro Rombo \n";
+	cout << "2. Area Rectangulo  || B. Perimetro Rectangulo \n";
+	cout << "3. Area Trapecio    || C. Perimetro Trapecio \n";
 	cout << endl;
 	cout << "0. SALIR\n";
 	cout << endl;
@@ -43,7 +37,7 @@ void menu() {
 
 int main(){
 	char option;
-	double num1, num2, value;
+	double num1, num2, num3, num4, value;
 	int i;
 
 	do {
@@ -54,97 +48,37 @@ int main(){
 
 		switch (option) {
 			case '1':
-				cout << " || Sumar + || \n";
-				cout << "Ingrese el Primer Numero:" << endl;
+				cout << " || Area Rombo || \n";
+				cout << "Ingrese el Primera Diagonal (cm):" << endl;
 				cin >> num1;
 				cout << endl;
-				cout << "Ingrese el Segundo Numero:" << endl;
+				cout << "Ingrese la Segunda Diagonal (cm)" << endl;
 				cin >> num2;
 				cout << endl;
-				value = num1 + num2;
-				cout << num1 << " + " << num2 << " = " << value << endl;
-				cout << "==================================" << endl;
-			break;
-			case '2':
-				cout << " || Restar - || \n";
-				cout << "Ingrese el Primer Numero:" << endl;
-				cin >> num1;
-				cout << endl;
-				cout << "Ingrese el Segundo Numero:" << endl;
-				cin >> num2;
-				cout << endl;
-				value = num1 - num2;
-				cout << num1 << " - " << num2 << " = " << value << endl;
-				cout << "==================================" << endl;
-			break;
-			case '3':
-				cout << " || Multiplicar * || \n";
-				cout << "Ingrese el Primer Numero:" << endl;
-				cin >> num1;
-				cout << endl;
-				cout << "Ingrese el Segundo Numero:" << endl;
-				cin >> num2;
-				cout << endl;
-				value = num1 * num2;
-				cout << num1 << " * " << num2 << " = " << value << endl;
-				cout << "==================================" << endl;
-			break;
-			case '4':
-				cout << " || Dividir / || \n";
-				cout << "Ingrese el Primer Numero:" << endl;
-				cin >> num1;
-				cout << endl;
-				cout << "Ingrese el Segundo Numero:" << endl;
-				cin >> num2;
-				cout << endl;
-				value = num1 / num2;
-				cout << num1 << " / " << num2 << " = " << value << endl;
-				cout << "==================================" << endl;
-			break;
-			case '5':
-				cout << " || Porcentaje % || \n";
-				cout << "Ingrese el Primer Numero:" << endl;
-				cin >> num1;
-				cout << endl;
-				cout << "Ingrese el Segundo Numero:" << endl;
-				cin >> num2;
-				cout << endl;
-				value = (num1 * num2) / 100;
-				cout << num1 << " % de " << num2 << " es = " << value << endl;
-				cout << "==================================" << endl;
-			break;
-			case '6':
-				cout << " || Potenciar ^ || \n";
-				cout << "Ingrese el Primer Numero:" << endl;
-				cin >> num1;
-				cout << endl;
-				cout << "Ingrese el Segundo Numero:" << endl;
-				cin >> num2;
-				cout << endl;
-				value = pow(num1, num2);
-				cout << num1 << " ^ " << num2 << " es = " << value << endl;
-				cout << "==================================" << endl;
-			break;
-			case '7':
-				cout << " || Raiz Cuadrada || \n";
-				cout << "Ingrese el Numero:" << endl;
-				cin >> num1;
-				cout << endl;
-				value = sqrt(num1);
-				cout << "La Raiz Cuadrada de " << num1 << " es = " << value << endl;
-				cout << "==================================" << endl;
-			break;
-			case '8':
-				cout << " || Area Cuadrado cm^2 || \n";
-				cout << "Ingrese el Lado (cm):" << endl;
-				cin >> num1;
-				cout << endl;
-				value = pow(num1, 2);
+				value = (num1 * num2) / 2;
 				cout << "El Area es = " << value << " cm2" << endl;
 				cout << "==================================" << endl;
 			break;
-			case '9':
-				cout << " || Area Rectangulo cm^2 || \n";
+			case 'A':
+				cout << " || Perimetro Rombo || \n";
+				cout << "Ingrese el Primer Lado (cm):" << endl;
+				cin >> num1;
+				cout << endl;
+				cout << "Ingrese el Segundo Lado (cm):" << endl;
+				cin >> num2;
+				cout << endl;
+				cout << "Ingrese el Tercer Lado (cm):" << endl;
+				cin >> num3;
+				cout << endl;
+				cout << "Ingrese el Cuarto Lado (cm):" << endl;
+				cin >> num4;
+				cout << endl;
+				value = num1 + num2 + num3 + num4;
+				cout << "El Perimetro es = " << value << " cm" << endl;
+				cout << "==================================" << endl;
+			break;
+			case '2':
+				cout << " || Area Rectangulo || \n";
 				cout << "Ingrese el Primer Lado (cm):" << endl;
 				cin >> num1;
 				cout << endl;
@@ -155,81 +89,49 @@ int main(){
 				cout << "El Area es = " << value << " cm2" << endl;
 				cout << "==================================" << endl;
 			break;
-			case 'A':
-				cout << " || Area Circulo cm^2 || \n";
-				cout << "Ingrese el Radio (cm):" << endl;
-				cin >> num1;
-				cout << endl;
-				value = M_PI * pow(num1, 2);
-				cout << "El Area es = " << value << " cm2" << endl;
-				cout << "==================================" << endl;
-			break;
 			case 'B':
-				cout << " || Area Triangulo cm^2 || \n";
-				cout << "Ingrese la Base (cm):" << endl;
+				cout << " || Perimetro Rectangulo || \n";
+				cout << "Ingrese el Primer Lado (cm):" << endl;
 				cin >> num1;
 				cout << endl;
-				cout << "Ingrese la Altura (cm)" << endl;
+				cout << "Ingrese el Segundo Lado (cm):" << endl;
 				cin >> num2;
 				cout << endl;
-				value = 0.5 * num1 * num2;
+				value = (2 * num1) + (2 * num2);
+				cout << "El Perimetro es = " << value << " cm" << endl;
+				cout << "==================================" << endl;
+			break;
+			case '3':
+				cout << " || Area Trapecio || \n";
+				cout << "Ingrese el Primer Lado (Base) (cm):" << endl;
+				cin >> num1;
+				cout << endl;
+				cout << "Ingrese el Segundo Lado (cm)" << endl;
+				cin >> num2;
+				cout << endl;
+				cout << "Ingrese la Altura (cm):" << endl;
+				cin >> num3;
+				cout << endl;
+				value = ((num1 + num2) * num3) / 2;
 				cout << "El Area es = " << value << " cm2" << endl;
 				cout << "==================================" << endl;
 			break;
 			case 'C':
-				cout << " || Volumen Cilindro cm^3 || \n";
-				cout << "Ingrese el Radio (cm^3):" << endl;
+				cout << " || Perimetro Trapecio || \n";
+				cout << "Ingrese el Primer Lado (cm):" << endl;
 				cin >> num1;
 				cout << endl;
-				cout << "Ingrese la Altura (cm^3):" << endl;
+				cout << "Ingrese el Segundo Lado (cm):" << endl;
 				cin >> num2;
 				cout << endl;
-				value = M_PI * num2 * pow(num1, 2);
-				cout << "El Volumen es = " << value << " cm3" << endl;
-				cout << "==================================" << endl;
-			break;
-			case 'D':
-				cout << " || Binomio Cuadrado (a + b)^2 || \n";
-				cout << "Ingrese el Primer Numero:" << endl;
-				cin >> num1;
+				cout << "Ingrese el Tercer Lado (cm):" << endl;
+				cin >> num3;
 				cout << endl;
-				cout << "Ingrese el Segundo Numero:" << endl;
-				cin >> num2;
+				cout << "Ingrese el Cuarto Lado (cm):" << endl;
+				cin >> num4;
 				cout << endl;
-				value = pow(num1, 2) + 2 * num1 * num2 + pow(num2, 2);
-				cout << "(" << num1 << " + " << num2 << ")^2" << " es = " << value << endl;
-				cout << "==================================" << endl;
-			break;
-			case 'E':
-				cout << " || De 0 a 10 / While || \n";
-				i=0;
-				while (i<=10){
-					cout << i << endl;
-					i++;
-				}
-				cout << "==================================" << endl;
-			break;
-			case 'F':
-				cout << " || De 10 a 0 / While || \n";
-				i=10;
-				while (i>=0){
-					cout << i << endl;
-					i--;
-				}
-				cout << "==================================" << endl;
-			break;
-			case 'G':
-				cout << " || De 0 a 10 / For || \n";
-				for (i=0; i <=10;i++){
-					cout << i << endl;
-				}
-				cout << "==================================" << endl;
-			break;
-			case 'H':
-				cout << " || De 10 a 0 / For || \n";
-				for (i=10; i >=0;i--){
-					cout << i << endl;
-				}
+				value = num1 + num2 + num3 + num4;
+				cout << "El Perimetro es = " << value << " cm" << endl;
 				cout << "==================================" << endl;
 			break;
 			case '0':
